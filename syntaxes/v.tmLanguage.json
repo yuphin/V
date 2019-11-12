@@ -1,0 +1,133 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.von",
+	"name": "v",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include" : "#types"
+		},
+		{
+			"include" : "#operators"
+		},
+		{
+			"include" : "#comments"
+		},
+		{
+			"include" : "#sys-types"
+		},
+		{
+			"include" : "#numeric"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.v",
+				"match": "\\b(if|while|for|return|then|to|by|endfor|endif|endwhile|do)\\b"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.v",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.v",
+					"match": "\\\\."
+				}
+			]
+		},
+		"types": {
+			"patterns": [
+				{
+					"name": "storage.type.v",
+					"match": "\\b(var|func|endfunc)\\b"
+				}
+			]
+		},
+		"operators": {
+			"patterns": [
+				{
+					"name": "keyword.operator.v",
+					"match": "\\b(or|and|mod|div|not)\\b"
+				}
+			]
+		},
+		"comments": {
+			"patterns": [
+				{
+					"match": "(%).*$\n?",
+					"name": "comment.line.v"
+				}
+			]
+		},
+		"sys-types": {
+			"patterns": [
+				{
+					"match": "\\b(int|real)\\b",
+					"name": "support.type.sys-types.v"
+				}
+			]
+		},
+		"numeric": {
+			"patterns": [
+				{
+				"match": "(?x)\n(?<!\\$)(?:\n  (?:\\b[0-9][0-9_]*(\\.)[0-9][0-9_]*[eE][+-]?[0-9][0-9_]*(n)?\\b)| # 1.1E+3\n  (?:\\b[0-9][0-9_]*(\\.)[eE][+-]?[0-9][0-9_]*(n)?\\b)|             # 1.E+3\n  (?:\\B(\\.)[0-9][0-9_]*[eE][+-]?[0-9][0-9_]*(n)?\\b)|             # .1E+3\n  (?:\\b[0-9][0-9_]*[eE][+-]?[0-9][0-9_]*(n)?\\b)|                 # 1E+3\n  (?:\\b[0-9][0-9_]*(\\.)[0-9][0-9_]*(n)?\\b)|                      # 1.1\n  (?:\\b[0-9][0-9_]*(\\.)(n)?\\B)|                                  # 1.\n  (?:\\B(\\.)[0-9][0-9_]*(n)?\\b)|                                  # .1\n  (?:\\b[0-9][0-9_]*(n)?\\b(?!\\.))                                 # 1\n)(?!\\$)",
+				"captures": {
+					"0": {
+						"name": "constant.numeric.decimal.v"
+					},
+					"1": {
+						"name": "meta.delimiter.decimal.period.v"
+					},
+					"2": {
+						"name": "storage.type.numeric.bigint.v"
+					},
+					"3": {
+						"name": "meta.delimiter.decimal.period.v"
+					},
+					"4": {
+						"name": "storage.type.numeric.bigint.v"
+					},
+					"5": {
+						"name": "meta.delimiter.decimal.period.v"
+					},
+					"6": {
+						"name": "storage.type.numeric.bigint.v"
+					},
+					"7": {
+						"name": "storage.type.numeric.bigint.v"
+					},
+					"8": {
+						"name": "meta.delimiter.decimal.period.v"
+					},
+					"9": {
+						"name": "storage.type.numeric.bigint.v"
+					},
+					"10": {
+						"name": "meta.delimiter.decimal.period.v"
+					},
+					"11": {
+						"name": "storage.type.numeric.bigint.v"
+					},
+					"12": {
+						"name": "meta.delimiter.decimal.period.v"
+					},
+					"13": {
+						"name": "storage.type.numeric.bigint.v"
+					},
+					"14": {
+						"name": "storage.type.numeric.bigint.v"
+					}
+				}
+				}
+			]
+		}
+	},
+	"scopeName": "source.v"
+}

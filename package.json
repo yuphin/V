@@ -1,0 +1,25 @@
+{
+    "name": "v",
+    "displayName": "Vex",
+    "description": "Support for V language",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.40.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "v",
+            "aliases": ["v", "v"],
+            "extensions": ["v"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "v",
+            "scopeName": "source.v",
+            "path": "./syntaxes/v.tmLanguage.json"
+        }]
+    }
+}
