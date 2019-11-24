@@ -28,7 +28,7 @@
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.control.v",
-				"match": "\\b(if|while|for|return|then|to|by|endfor|endif|endwhile|do)\\b"
+				"match": "\\b(if|while|for|return|then|to|by|endfor|endif|endwhile|do|else)\\b"
 			}]
 		},
 		"strings": {
@@ -53,7 +53,7 @@
 		"operators": {
 			"patterns": [
 				{
-					"name": "keyword.operator.v",
+					"name": "keyword.other.v",
 					"match": "\\b(or|and|mod|div|not)\\b"
 				}
 			]
