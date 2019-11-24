@@ -11,13 +11,13 @@
     ],
     "contributes": {
         "languages": [{
-            "id": "v",
-            "aliases": ["v", "v"],
+            "id": "V",
+            "aliases": ["V", "V"],
             "extensions": ["v"],
             "configuration": "./language-configuration.json"
         }],
         "grammars": [{
-            "language": "v",
+            "language": "V",
             "scopeName": "source.v",
             "path": "./syntaxes/v.tmLanguage.json"
         }]
