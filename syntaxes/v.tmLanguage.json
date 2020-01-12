@@ -69,7 +69,7 @@
 		"sys-types": {
 			"patterns": [
 				{
-					"match": "\\b(int|real)\\b",
+					"match": "\\b(int|real|void|print|read)\\b",
 					"name": "support.type.sys-types.v"
 				}
 			]
